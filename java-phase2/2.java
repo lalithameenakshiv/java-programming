@@ -238,5 +238,28 @@ public class Main {
 }
 OUTPUT
   720
+
+//11.fibonaaci series
+PROGRAM
+import java.util.Scanner;
+
+public class  Main{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+           int a = 0, b = 1, c;
+        for(int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+OUTPUT
+ Enter number of terms: 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 2584 4181 6765 
       
        

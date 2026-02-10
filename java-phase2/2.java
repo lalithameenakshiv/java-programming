@@ -47,6 +47,8 @@ j
     
     }
       System.out.println(sum);
+OUTPUT
+  2
 
 3.//reversal digit
 PROGRAM
@@ -69,9 +71,37 @@ import java.util.*;
 output
 987
 
-
+4.//palindrome or not
+  
+PROGRAM
+  import java.util.*;
+   public class Main {
+    public static void main(String[] args) {
+      Scanner scan= new Scanner(System.in);
+    int a = scan.nextInt();
+    int temp = a; 
+    int rev = 0;
+    while(a>0){
+      int r = a%10;
+    rev=rev*10+r;
+    a=a/10;
+    
+    }
+    if(rev==temp){
+      System.out.println("palindrome");
+    }
+    else{
+   System.out.println("not a palindrome");   
+    }
+      
       
     }
 }
 OUTPUT
-  2
+ not a palindrome 
+
+
+      
+    }
+}
+

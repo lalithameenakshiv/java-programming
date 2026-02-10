@@ -193,5 +193,30 @@ public class Main {
 OUTPUT
   12
 
-//9.
+//9.prime or not
+PROGRAM
+  import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      int num = scan.nextInt();
+      int count = 0;
+      for(int i =2;i<=num/2;i++){
+        if(num % i == 0){
+          count++;
+        
+        }
+      }
+        if(count==2){
+         System.out.println("prime"); 
+        }
+        else{
+          System.out.println("not prime");
+        }
+        
+    }
+ }
+OUTPUT
+ not prime 
+      
        

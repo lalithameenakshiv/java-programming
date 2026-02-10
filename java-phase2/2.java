@@ -131,4 +131,67 @@ public class Main {
 
 OUTPUT
   S
+//6.leap year
+  PROGRAM
+  import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      int year = scan.nextInt();
+      if((year%4==0 && year %100!=0)||year%400==0){
+       System.out.println("leap year"); 
+      }
+      else{
+        System.out.println("not a leap year");
+      }
+    }
+}
 
+OUTPUT
+  not a leap year
+
+//7.Factor numbers
+PROGRAM
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      
+      int factor = scan.nextInt();
+      for(int i =1;i<=10;i++){
+        if(factor % i == 0){
+          System.out.println(i + "");
+        }
+      }
+    }
+ }  
+OUTPUT
+1
+2
+3
+4
+5
+6
+10
+
+//8.count
+PROGRAM
+ import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      int num = scan.nextInt();
+      int count = 0;
+      for(int i =2;i<=num/2;i++){
+        if(num % i == 0){
+          count++;
+        }
+      }
+      System.out.println(count+2);
+    }
+ }
+OUTPUT
+  12
+
+//9.
+       

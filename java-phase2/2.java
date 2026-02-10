@@ -97,11 +97,12 @@ PROGRAM
       
     }
 }
-OUTPUT
- not a palindrome 
+
 
 
       
     }
 }
+OUTPUT
+ not a palindrome 
 

@@ -321,7 +321,78 @@ public class Main {
         System.out.println("Product of array elements = " + product);
     }
 }
-//15.
+//15.odd even
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        int evenSum = 0;
+        int oddSum = 0;
+
+        for(int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+
+            if(arr[i] % 2 == 0) {
+                evenSum = evenSum + arr[i];
+            } else {
+                oddSum = oddSum + arr[i];
+            }
+        }
+
+        System.out.println("Even Sum = " + evenSum);
+        System.out.println("Odd Sum = " + oddSum);
+    }
+}
+//16.
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int arr[] = new int[size];
+
+        int evenSum = 0;
+        int oddSum = 0;
+
+       
+        arr[0] = sc.nextInt();
+        int max = arr[0];
+
+        if(arr[0] % 2 == 0) {
+            evenSum += arr[0];
+        } else {
+            oddSum += arr[0];
+        }
+
+       
+        for(int i = 1; i < size; i++) {
+            arr[i] = sc.nextInt();
+
+            if(arr[i] % 2 == 0) {
+                evenSum += arr[i];
+            } else {
+                oddSum += arr[i];
+            }
+
+            
+            if(arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        System.out.println("Even Sum = " + evenSum);
+        System.out.println("Odd Sum = " + oddSum);
+        System.out.println("Maximum Element = " + max);
+    }
+}
+
 
 
       

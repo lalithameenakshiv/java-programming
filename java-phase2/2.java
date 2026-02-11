@@ -283,7 +283,7 @@ public class Main {
 OUTPUT
 1679616
 
-//13.
+//13.arr
  import java.util.*;
 public class Main {
     public static void main(String[] args) {
@@ -299,5 +299,30 @@ public class Main {
       
     }
 } 
+//14.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter array elements:");
+        for(int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int sum = 0;
+        int product = 1;
+        for(int i = 0; i < n; i++) {
+            sum += arr[i];
+            product *= arr[i];
+        }
+        System.out.println("Sum of array elements = " + sum);
+        System.out.println("Product of array elements = " + product);
+    }
+}
+//15.
+
+
       
        

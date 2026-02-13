@@ -430,7 +430,142 @@ public class Main {
         System.out.println(max);
     }
 }
-//19
+//19 2d
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int rsize = sc.nextInt();
+        int csize = sc.nextInt();
+
+        int arr[][] = new int[rsize][csize];
+
+        
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+ //20 add corner elements
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int rsize = sc.nextInt();
+        int csize = sc.nextInt();
+        int arr[][] = new int[rsize][csize];
+
+        
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int sum = 0;
+
+        
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                if(i == 0 || j == 0 || i == rsize-1 || j == csize-1){
+                    sum += arr[i][j];
+                }
+            }
+        }
+
+        System.out.println(sum);
+    }
+}
+
+//21 Diagonal elements left
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        int rsize = sc.nextInt();
+        int csize = sc.nextInt();
+
+        int arr[][] = new int[rsize][csize];
+
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int sum = 0;
+
+        
+        for(int i = 0; i < rsize; i++){
+            for(int j = 0; j < csize; j++){
+                if(i == j){
+                    sum += arr[i][j];
+                }
+            }
+        }
+
+        System.out.println(sum);
+    }
+}
+
+//22.
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int rsize = sc.nextInt();
+        int csize = sc.nextInt();
+
+        if (rsize != csize) {
+            System.out.println("Please enter a square matrix!");
+            return;
+        }
+
+        int size = rsize;
+        int arr[][] = new int[size][size];
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += arr[i][i];           // main diagonal
+            sum += arr[i][size - 1 - i]; // secondary diagonal
+        }
+
+        // Avoid double-counting the center element for odd-sized matrices
+        if (size % 2 != 0) {
+            sum -= arr[size / 2][size / 2];
+        }
+
+        System.out.println(sum);
+    }
+}
+
+
+
+
 
 
 

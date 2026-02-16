@@ -563,7 +563,7 @@ public class Main {
     }
 }
 
-linera seacrh
+//23linera seacrh
 import java.util.*;
 
 public class Main {
@@ -589,6 +589,49 @@ public class Main {
       }
     }
 }
+
+//24 binary search
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int[] arr = new int[n];   
+        
+        for(int i = 0; i < n; i++){   
+            arr[i] = sc.nextInt();
+        }
+        
+        Arrays.sort(arr);   
+        
+        int search = sc.nextInt();
+        int start = 0, end = n - 1;
+        boolean f = false;
+        
+        while(start <= end){
+            int mid = (start + end) / 2;
+            
+            if(arr[mid] == search){
+                System.out.println(mid + " present");
+                f = true;
+                break;
+            }
+            else if(search > arr[mid]){
+                start = mid + 1;
+            }
+            else{
+                end = mid - 1;
+            }
+        }
+        
+        if(f == false){
+            System.out.println("no data");
+        }
+    }
+}
+
 
 
 

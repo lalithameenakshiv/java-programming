@@ -715,7 +715,7 @@ public class Main {
         System.out.println("Maximum Odd: " + oddmax);
     }
 }
-//27.methods
+//27.methods with arg with return type
 import java.util.*;
 public class Main {
     
@@ -741,7 +741,7 @@ public class Main {
         System.out.println(prime(num1));
       }
 }
-28
+//28 with arg without return type
   import java.util.*;
 public class Main {
     
@@ -768,6 +768,7 @@ public class Main {
         m.prime(num1);
       }
 }
+29.
 
 
 

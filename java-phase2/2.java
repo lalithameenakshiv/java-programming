@@ -687,7 +687,35 @@ public class Main {
 }
 }
 
-//26.
+//26. even odd max
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];   
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+        int evenmax = Integer.MIN_VALUE;
+        int oddmax = Integer.MIN_VALUE;
+        for(int i = 0; i < n; i++){
+            if(arr[i] % 2 == 0){
+                if(arr[i] > evenmax){
+                    evenmax = arr[i];
+                }
+            }
+            else{
+                if(arr[i] > oddmax){
+                    oddmax = arr[i];
+                }
+            }
+        }
+        System.out.println("Maximum Even: " + evenmax);
+        System.out.println("Maximum Odd: " + oddmax);
+    }
+}
+
 
 
 

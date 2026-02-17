@@ -768,7 +768,80 @@ public class Main {
         m.prime(num1);
       }
 }
-29.
+//29.without arg with retuen type
+import java.util.*;
+public class Main{
+    public static boolean prime(){
+        Scanner sc = new Scanner(System.in);
+        int a=sc.nextInt();
+        int count=0;
+        for(int i=1;i<=a;i++){
+            if(a%i==0){
+                count++;
+            }
+        }
+        if(count==2){
+            return true;
+        }
+        else{
+          return false;
+        }
+    }
+	public static void main(String[] args) {
+	   System.out.println(prime());
+	   System.out.println(prime());
+	  
+	}
+}
+
+//30.
+import java.util.*;
+
+public class Main {
+
+    
+    public static boolean checkPrime(int n) {
+        if (n <= 1)
+            return false;
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    
+    public static int reverse(int n) {
+        int rev = 0;
+
+        while (n > 0) {
+            int digit = n % 10;
+            rev = rev * 10 + digit;
+            n = n / 10;
+        }
+
+        return rev;
+    }
+
+    
+    public static void twistedPrime(int num) {
+        int reversedNumber = reverse(num);
+
+        if (checkPrime(num) && checkPrime(reversedNumber)) {
+            System.out.println("Twisted Prime");
+        } else {
+            System.out.println("Not Twisted Prime");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+
+        twistedPrime(num);
+    }
+}
 
 
 

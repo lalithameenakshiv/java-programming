@@ -867,4 +867,37 @@ public class Main {
         m2.print();
     }
 }
+//32.hw do
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        double units = sc.nextDouble();
+        double bill = 0;
+
+        if (units <= 50) {
+            bill = units * 1;
+        } 
+        else if (units <= 150) {
+            bill = (50 * 1) + (units - 50) * 2;
+        } 
+        else if (units <= 250) {
+            bill = (50 * 1) + (100 * 2) + (units - 150) * 3;
+        } 
+        else {
+            bill = (50 * 1) + (100 * 2) + (100 * 3) + (units - 250) * 4;
+        }
+
+        // Add 20% surcharge if bill > 150
+        if (bill > 150) {
+            bill = bill + (bill * 0.20);
+        }
+
+        // Round to nearest integer
+        System.out.println(Math.round(bill));
+    }
+}
+
 

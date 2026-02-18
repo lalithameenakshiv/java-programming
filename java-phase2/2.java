@@ -1284,6 +1284,59 @@ public class Main
 
 	}
 }
+//38
+class Node{
+    Node prev;
+    int data;
+    Node next;
+    
+    Node(int data){
+        prev=null;
+        this.data=data;
+        next=null;
+    }
+}
+class Doublylinkedlist{
+    Node head=null;
+    Node tail=null;
+    int size=0;
+    
+    void addatlast(int data){
+        Node newnode = new Node(data);
+        if(head==null){
+            head=tail=newnode;
+        }
+        else{
+            newnode.prev=tail;
+            tail.next=newnode;
+            tail=newnode;
+        }
+    }
+    
+	void display() {
+		Node temp = tail;
+		while(temp!=null) {
+			System.out.print(temp.data+" ");
+			temp = temp.prev;
+		}
+		System.out.println();
+	}
+    
+    
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	Doublylinkedlist d = new Doublylinkedlist();
+	d.addatlast(100);
+	d.addatlast(200);
+	d.addatlast(300);
+	d.addatlast(400);
+	d.display();
+	
+	}
+}
 
 
 

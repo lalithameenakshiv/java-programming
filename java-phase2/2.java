@@ -899,5 +899,66 @@ public class Main {
         System.out.println(Math.round(bill));
     }
 }
-
+//33
+class node{
+  int data;
+  node next;
+}
+public class main{
+  public static void main(String[] args){
+    node n1 = new node();
+    n1.data=10;
+    node n2 = new node();
+    n2.data=20;
+    n1.next=n2;
+    node n3 = new node();
+    n3.data = 30;
+    n2.next= n3;
+    System.out.println(n1.data+" "+n2.data+" "+n3.data);
+     System.out.println(n1.data+" "+n1.next.data+" "+n1.next.next.data);
+    
+  
+  }
+}
+//34 singly linked list
+class node{
+  int data;
+  node next;
+  node(int d){
+    data=d;
+    next=null;
+  }
+}
+class singlylinkedlist{
+  node head = null;
+  node tail = null;
+  void add(int data){
+    node newnode = new node(data);
+    if(head==null){
+      head=tail=newnode;
+    }
+    else{
+      tail.next=newnode;
+      tail=newnode;
+    }
+  }
+  void display(){
+    node temp=head;
+    while(temp!=null){
+      System.out.print(temp.data+" ");
+      temp = temp.next;
+    }
+  }
+}
+public class main{
+ public static void main (String[] args) {
+  singlylinkedlist s = new singlylinkedlist();
+  s.add(100);
+  s.display();
+  s.add(200);
+  s.display();
+  s.add(300);
+  s.display();
+}
+}
 

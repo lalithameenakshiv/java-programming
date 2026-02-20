@@ -1802,6 +1802,92 @@ public class Main {
 	}
 }
 
+//
+class node{
+  int data;
+  node left;
+  node right;
+
+  node(int d){
+    data = d;
+    left = null;
+    right = null;
+  }
+}
+
+public class main{
+
+  46.// Inorder Traversal
+  static void inorder(node root){
+    if(root != null){
+      inorder(root.left);
+      System.out.print(root.data + " ");
+      inorder(root.right);
+    }
+  }
+
+  public static void main(String[] args){
+
+    node root = new node(10);
+    node n1 = new node(20);
+    root.left = n1;
+
+    node n2 = new node(30);
+    root.right = n2;
+
+    node n3 = new node(40);
+    root.left.right = n3;
+
+    inorder(root);
+  }
+}
+//47
+class Node{
+    int data;
+    Node left;
+    Node right;
+    Node (int d){
+        data = d;
+        left=null;
+        right=null;
+    }
+}
+
+class Binarytree{
+    Node root=null;
+    
+    void add(int data){
+        if(root==null){
+             root = new Node(data);
+        }
+        else{
+            childadd(root,data);
+        }
+       
+    }
+    
+    void childadd(Node root,int data){
+        if(root.left==null){
+            root.left = new Node(data);
+        }
+        else if(root.right==null){
+              root.right = new Node(data);
+        }
+        else{
+            add(root.left,data);
+        }
+    }
+}
+
+public class Main{
+	public static void main(String[] args) {
+	Binarytree b = new Binarytree();
+	b.add(10);
+	b.add(20);
+	b.add(30);
+   b.add(40);
+	}
+}
 
 
 
